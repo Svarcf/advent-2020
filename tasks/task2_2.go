@@ -7,7 +7,7 @@ import (
 	"svarcf/advent-2020/common"
 )
 
-func Task2_1() {
+func Task2_2() {
 	file, err := common.ReadFile("input/data2.txt")
 	if err != nil {
 		fmt.Println("error reading a file", err)

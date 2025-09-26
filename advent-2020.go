@@ -7,5 +7,5 @@ import (
 
 func main() {
 	fmt.Println("Hello world")
-	tasks.Task3()
+	tasks.Task3_2()
 }
