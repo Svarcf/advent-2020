@@ -7,7 +7,7 @@ import (
 	"svarcf/advent-2020/common"
 )
 
-func Task2() {
+func Task2_1() {
 	file, err := common.ReadFile("input/data2.txt")
 	if err != nil {
 		fmt.Println("error reading a file", err)
@@ -31,15 +31,14 @@ func Task2() {
 		if err != nil {
 			panic(err)
 		}
-		count := 0
-		for _, char := range words[2] {
-			if string(char) == targetChar {
-				count++
-			}
-		}
-		if (count >= lower) && (count <= upper) {
+		upper = upper - 1
+		lower = lower - 1
+
+		word := string(words[2])
+		if (word[lower] == targetChar[0] && word[upper] != targetChar[0]) || (word[lower] != targetChar[0] && word[upper] == targetChar[0]) {
 			result++
 		}
+
 	}
 	fmt.Println(result)
 
